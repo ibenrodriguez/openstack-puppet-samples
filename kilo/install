@@ -1,0 +1,12 @@
+sudo apt-get install puppet -y
+sudo puppet module install openstack/keystone --version ">=6.0.0 <7.0.0"
+sudo puppet module install openstack/glance --version ">=6.0.0 <7.0.0"
+sudo puppet module install openstack/cinder --version ">=6.0.0 <7.0.0"
+sudo puppet module install openstack/nova --version ">=6.0.0 <7.0.0"
+sudo puppet module install openstack/neutron --version ">=6.0.0 <7.0.0"
+sudo puppet module install example42/network
+sudo puppet module install saz/memcached
+
+vi openstack-aio-ubuntu-single-nic.pp
+
+sudo puppet apply --verbose openstack-aio-ubuntu-single-nic.pp
